@@ -13,6 +13,7 @@ Dự án xây dựng end-to-end data pipeline cho Glamira - một nền tảng e
 3. **Time-based Trends**: Phát hiện patterns theo ngày, tuần, tháng
 4. **Product Performance**: Đánh giá hiệu suất sản phẩm và categories
 
+_Dashboard - Looker Studio link: https://lookerstudio.google.com/reporting/8f5dc6b2-b6ba-4985-b6e8-18b1fc26e039_
 ---
 
 ## Technology Stack
