@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "Customer dimension with SCD Type 2."
+    columns:
+      - name: customer_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_product
+    description: "Product dimension."
+    columns:
+      - name: product_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_date
+    description: "Date dimension."
+    columns:
+      - name: date_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_location
+    description: "Location dimension."
+    columns:
+      - name: location_key
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_sales
+    description: "Sales fact table."
+    columns:
+      - name: sales_key
+        tests:
+          - unique
+          - not_null
+      - name: customer_key
+        tests:
+          - not_null
+      - name: product_key
+        tests:
+          - not_null
+      - name: date_key
+        tests:
+          - not_null
+      - name: location_key
+        tests:
+          - not_null

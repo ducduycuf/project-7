@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_order
+    description: "Staging: Orders from main_collection. Grain: 1 row per line item."
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
+
+  - name: stg_location
+    description: "Staging: IP to location mapping. Grain: 1 row per IP."
+    columns:
+      - name: ip_address
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_product
+    description: "Staging: Product catalog. Grain: 1 row per product."
+    columns:
+      - name: product_id
+        tests:
+          - not_null

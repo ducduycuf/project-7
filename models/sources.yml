@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: glamira_raw
+    description: "Raw data from Glamira e-commerce platform"
+    database: top-gantry-479201-j2
+    schema: project6  # Schema chứa raw data gốc
+    
+    tables:
+      - name: main_collection
+        description: "Main events collection including checkout success events"
+            
+      - name: ip_locations
+        description: "IP to location mapping"
+            
+      - name: product_collection
+        description: "Product catalog data"
